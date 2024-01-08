@@ -32,7 +32,10 @@ server.use('/', express.static(path.join(__dirname, 'public')));
 
 
 //root routes
-server.use('/', require('./routes/root'));
+server.use('/', require('./routes/rootRoute'));
+server.use('/users', require('./routes/usersRoutes'));
+server.use('/bids', require('./routes/bidsRoutes'));
+server.use('/products', require('./routes/productsRoutes'));
 
 
 // the unspecified routes go through this default route. make sure this block of code stays at bottom otherwise specified routes will be ignored.

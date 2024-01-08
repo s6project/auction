@@ -25,6 +25,7 @@ async function connection() {
     catch(err){
         //to show error
         console.log("An error occurred\n",err);
+        //to log the error
         logEvents(`${err.name} ::> ${err.message}\t`, 'errLog.log')
     }
     finally {
